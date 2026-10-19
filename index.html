@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSK SOLAR SYSTEMS | Solar Equipment Supplier in Oshodi, Lagos</title>
+    <meta name="description" content="Explore solar energy equipment at KSK SOLAR SYSTEMS, located at Arena Shopping Complex, Bolade, Oshodi, Lagos. Contact us for product inquiries and prices.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="KSK SOLAR SYSTEMS | Premium Solar Solutions in Oshodi">
+    <meta property="og:description" content="Discover quality solar panels, inverters, batteries, and solar accessories at KSK SOLAR SYSTEMS.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="hero-solar-roof.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --black: #101010;
+            --gold: #D4AF37;
+            --gold-hover: #b8952b;
+            --white: #FFFFFF;
+            --light-bg: #F6F7F8;
+            --gray-text: #666666;
+            --transition: all 0.3s ease;
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); color: var(--black); background-color: var(--white); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; object-fit: cover; }
+
+        /* Utilities */
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .section-padding { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; position: relative; display: inline-block; }
+        .section-header h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--gold); }
+        .section-header p { color: var(--gray-text); font-size: 1.1rem; max-width: 600px; margin: 20px auto 0; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-size: 1rem; font-weight: 600; border-radius: 4px; cursor: pointer; transition: var(--transition); border: none; gap: 8px; }
+        .btn-gold { background-color: var(--gold); color: var(--black); }
+        .btn-gold:hover { background-color: var(--gold-hover); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
+        .btn-outline { background-color: transparent; color: var(--white); border: 2px solid var(--gold); }
+        .btn-outline:hover { background-color: var(--gold); color: var(--black); }
+        .btn-whatsapp { background-color: #25D366; color: var(--white); }
+        .btn-whatsapp:hover { background-color: #1ebe57; }
+
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background-color: transparent; padding: 20px 0; z-index: 1000; transition: var(--transition); }
+        nav.scrolled { background-color: var(--black); padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; color: var(--white); font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; }
+        .logo i { color: var(--gold); }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { color: var(--white); font-weight: 400; transition: var(--transition); }
+        .nav-links a:hover { color: var(--gold); }
+        .hamburger { display: none; color: var(--white); cursor: pointer; background: none; border: none; }
+
+        /* Hero Section */
+        .hero { height: 100vh; min-height: 600px; background: linear-gradient(rgba(16, 16, 16, 0.75), rgba(16, 16, 16, 0.85)), url('hero-solar-roof.jpg') center/cover no-repeat; display: flex; align-items: center; position: relative; }
+        .hero-content { max-width: 800px; color: var(--white); }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: #eeeeee; max-width: 600px; }
+        .hero-buttons { display: flex; gap: 20px; }
+
+        /* About Section */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-image { border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .about-image img { width: 100%; height: 500px; }
+        .about-content h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .about-content p { color: var(--gray-text); margin-bottom: 20px; }
+
+        /* Products Section */
+        .products-section { background-color: var(--light-bg); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: var(--transition); display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .product-image { height: 250px; overflow: hidden; background-color: #eaeaea; position: relative; }
+        .product-image img { width: 100%; height: 100%; transition: transform 0.5s ease; }
+        .product-card:hover .product-image img { transform: scale(1.05); }
+        .product-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .product-info h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .product-info p { color: var(--gray-text); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+
+        /* Why Choose Us */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { text-align: center; padding: 40px 20px; border: 1px solid #eee; border-radius: 8px; transition: var(--transition); }
+        .feature-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1); }
+        .feature-icon { width: 60px; height: 60px; background-color: rgba(212, 175, 55, 0.1); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .feature-card h3 { margin-bottom: 15px; font-size: 1.2rem; }
+        .feature-card p { color: var(--gray-text); font-size: 0.95rem; }
+
+        /* Gallery Section */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; height: 250px; cursor: pointer; position: relative; }
+        .gallery-item img { width: 100%; height: 100%; transition: transform 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        
+        /* Lightbox */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 3000; display: none; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 20px; right: 20px; color: white; cursor: pointer; background: none; border: none; font-size: 2rem; }
+
+        /* How It Works */
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+        .step-number { width: 50px; height: 50px; background-color: var(--gold); color: var(--black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 20px; font-family: var(--font-heading); }
+        .step-card h3 { margin-bottom: 10px; }
+        .step-card p { color: var(--gray-text); font-size: 0.95rem; }
+
+        /* CTA Section */
+        .cta-section { background: linear-gradient(rgba(16, 16, 16, 0.9), rgba(16, 16, 16, 0.9)), url('large-solar-array.jpg') center/cover fixed; color: var(--white); text-align: center; padding: 100px 0; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section p { color: #ccc; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* Contact Section */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-info-item { display: flex; gap: 20px; margin-bottom: 30px; }
+        .contact-info-icon { width: 50px; height: 50px; background-color: rgba(212, 175, 55, 0.1); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-info-text h4 { margin-bottom: 5px; }
+        .contact-info-text p { color: var(--gray-text); }
+        .contact-buttons { display: flex; flex-direction: column; gap: 15px; }
+        
+        /* Map */
+        .map-container { margin-top: 40px; border-radius: 8px; overflow: hidden; height: 300px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
+        /* Footer */
+        footer { background-color: var(--black); color: var(--white); padding: 60px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: var(--gold); margin-bottom: 20px; font-size: 1.2rem; }
+        .footer-col p { color: #aaa; font-size: 0.9rem; margin-bottom: 15px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #aaa; font-size: 0.9rem; transition: var(--transition); }
+        .footer-col ul li a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 20px; text-align: center; color: #666; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+        .back-to-top { background: var(--gold); color: var(--black); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: var(--transition); }
+        .back-to-top:hover { background: var(--gold-hover); }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 999; transition: var(--transition); }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+
+        /* Modal */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: var(--transition); padding: 20px; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content { background-color: var(--white); width: 100%; max-width: 600px; border-radius: 8px; padding: 40px; position: relative; max-height: 90vh; overflow-y: auto; transform: translateY(20px); transition: var(--transition); }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; cursor: pointer; color: var(--gray-text); transition: var(--transition); }
+        .modal-close:hover { color: var(--black); }
+        .modal-content h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .modal-content > p { color: var(--gray-text); margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-main); font-size: 1rem; transition: var(--transition); }
+        .form-control:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2); }
+        textarea.form-control { resize: vertical; min-height: 100px; }
+        .checkbox-group { display: flex; align-items: flex-start; gap: 10px; }
+        .checkbox-group input { margin-top: 5px; }
+        .checkbox-group label { font-weight: 400; font-size: 0.85rem; color: var(--gray-text); }
+        .error-message { color: #d9534f; font-size: 0.8rem; margin-top: 5px; display: none; }
+        .form-group.error .form-control { border-color: #d9534f; }
+        .form-group.error .error-message { display: block; }
+        .success-message { display: none; background-color: #d4edda; color: #155724; padding: 15px; border-radius: 4px; margin-bottom: 20px; font-size: 0.9rem; }
+        .fallback-message { display: none; margin-top: 20px; padding: 15px; background-color: var(--light-bg); border-radius: 4px; }
+        .fallback-message textarea { width: 100%; height: 150px; margin-bottom: 10px; padding: 10px; font-family: var(--font-main); border: 1px solid #ddd; border-radius: 4px; }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .about-image img { height: 350px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background-color: var(--black); flex-direction: column; justify-content: center; transition: var(--transition); }
+            .nav-links.active { right: 0; }
+            .hamburger { display: block; z-index: 1001; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-buttons { flex-direction: column; }
+            .modal-content { padding: 25px; }
+            .footer-bottom { flex-direction: column; gap: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="sun"></i>
+                KSK Solar
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="btn btn-gold open-modal">Connect With Us</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Power Your Future with Quality Solar Energy Solutions</h1>
+                <p>Discover solar energy equipment and accessories at KSK SOLAR SYSTEMS. Explore available products and contact our team for information, prices, and options suited to your energy needs.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-gold">Explore Our Products</a>
+                    <button class="btn btn-outline open-modal">Connect With Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <img src="solar-showroom-display.jpg" alt="Solar panels and equipment on display" loading="lazy" onerror="this.src='https://via.placeholder.com/600x500?text=Solar+Shop+Display'">
+            </div>
+            <div class="about-content reveal">
+                <h2>About KSK SOLAR SYSTEMS</h2>
+                <p>KSK SOLAR SYSTEMS is a solar energy equipment supplier located at Block C20, Shop 13, Arena Shopping Complex, Bolade, Oshodi, Lagos, Nigeria.</p>
+                <p>We help customers explore solar energy equipment and related products for different power, backup, lighting, and energy applications.</p>
+                <p>Our goal is to make it convenient for customers to discover available solar products, ask questions, and contact us for information that helps them make informed purchasing decisions.</p>
+                <p>Whether you are shopping for your home, business, or a solar installation project, you can contact our team to discuss your requirements and inquire about available products.</p>
+                <button class="btn btn-outline open-modal" style="margin-top: 20px; border-color: var(--gold); color: var(--black);">Talk to Our Team</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding products-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Explore Our Solar Products</h2>
+                <p>Browse our product categories and contact us to ask about availability, prices, and specifications.</p>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Why Choose Us?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="layers"></i></div>
+                    <h3>Wide Range of Product Categories</h3>
+                    <p>Explore different solar energy equipment categories and related accessories.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="map-pin"></i></div>
+                    <h3>Convenient Location</h3>
+                    <p>Find us at The Arena Market, Oshodi, Lagos, making it convenient for customers visiting the market.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="message-circle"></i></div>
+                    <h3>Direct Product Inquiries</h3>
+                    <p>Contact us to ask about available products, prices, and specifications before making a purchase.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="help-circle"></i></div>
+                    <h3>Customer-Focused Assistance</h3>
+                    <p>Explain your requirements and ask our team for information to help you identify suitable options.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="phone"></i></div>
+                    <h3>Convenient WhatsApp Communication</h3>
+                    <p>Reach us through WhatsApp to discuss product inquiries without navigating complicated contact processes.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="home"></i></div>
+                    <h3>Equipment for Different Applications</h3>
+                    <p>Explore equipment categories relevant to home, business, backup power, and outdoor lighting needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery Section -->
+    <section id="gallery" class="section-padding" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Product Gallery</h2>
+                <p>A glimpse of the solar equipment and accessories we offer.</p>
+            </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item" onclick="openLightbox('hybrid-inverter-battery-stack.jpg')">
+                    <img src="hybrid-inverter-battery-stack.jpg" alt="Hybrid inverter and battery stack" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Inverter+Battery'">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('growatt-inverter-lithium-rack.jpg')">
+                    <img src="growatt-inverter-lithium-rack.jpg" alt="Growatt inverter and lithium batteries" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Lithium+Battery'">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('tubular-battery.jpg')">
+                    <img src="tubular-battery.jpg" alt="Tubular battery" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Tubular+Battery'">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('solar-charge-controller.jpg')">
+                    <img src="solar-charge-controller.jpg" alt="Solar charge controller" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Charge+Controller'">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('deye-inverter-volta-battery.jpg')">
+                    <img src="deye-inverter-volta-battery.jpg" alt="Deye inverter and Volta battery" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Inverter+Setup'">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('wall-mounted-inverter-system.jpg')">
+                    <img src="wall-mounted-inverter-system.jpg" alt="Wall mounted inverter system" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Wall+Inverter'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged product image">
+    </div>
+
+    <!-- How to Get Started Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How to Get Started</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Browse Products</h3>
+                    <p>Explore the product categories displayed on the website.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <h3>Submit Your Inquiry</h3>
+                    <p>Tell us which products you are interested in and what you need.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <h3>Continue on WhatsApp</h3>
+                    <p>Your inquiry details will be prepared in a WhatsApp message so you can send them directly to KSK SOLAR SYSTEMS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section reveal">
+        <div class="container">
+            <h2>Ready to Explore Your Solar Options?</h2>
+            <p>Tell us what you need, and let's help you find suitable solar equipment for your home, business, or project.</p>
+            <button class="btn btn-gold open-modal">Connect With Us</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Visit or Contact KSK SOLAR SYSTEMS</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="reveal">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i data-lucide="building-2"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Business Name</h4>
+                            <p>KSK SOLAR SYSTEMS</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i data-lucide="map-pin"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Address</h4>
+                            <p>Block C20, Shop 13, Arena Shopping Complex, Bolade, Oshodi, Lagos, Nigeria.</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i data-lucide="phone"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Phone</h4>
+                            <p>0814 430 2941</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i data-lucide="message-circle"></i></div>
+                        <div class="contact-info-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.link/mtj2dm" target="_blank" style="color: var(--gold);">https://wa.link/mtj2dm</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i data-lucide="landmark"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Landmark</h4>
+                            <p>The Arena Market, Oshodi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal contact-buttons">
+                    <a href="https://wa.link/mtj2dm" target="_blank" class="btn btn-whatsapp">
+                        <i data-lucide="message-circle"></i> Chat on WhatsApp
+                    </a>
+                    <a href="tel:08144302941" class="btn btn-gold">
+                        <i data-lucide="phone"></i> Call Us
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Arena+Shopping+Complex,+Bolade,+Oshodi,+Lagos" target="_blank" class="btn btn-outline" style="border-color: var(--gold); color: var(--black);">
+                        <i data-lucide="map"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Map Embed -->
+            <div class="map-container reveal">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.897369341487!2d3.336620314770387!3d6.555984695342185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91b18f8d5c3b%3A0x8b8b8b8b8b8b8b8b!2sArena%20Shopping%20Complex!5e0!3m2!1sen!2sng!4v1689000000000!5m2!1sen!2sng" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" 
+                    title="KSK Solar Systems Location Map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px;">
+                        <i data-lucide="sun"></i> KSK Solar
+                    </a>
+                    <p>Your trusted solar energy equipment supplier located at The Arena Market, Oshodi, Lagos. We provide quality solar products for residential and commercial needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Solar Panels</a></li>
+                        <li><a href="#products">Hybrid Inverters</a></li>
+                        <li><a href="#products">Lithium Batteries</a></li>
+                        <li><a href="#products">Solar Street Lights</a></li>
+                        <li><a href="#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Block C20, Shop 13, Arena Shopping Complex, Bolade, Oshodi, Lagos.</p>
+                    <p>0814 430 2941</p>
+                    <a href="https://wa.link/mtj2dm" target="_blank" class="btn btn-whatsapp" style="margin-top: 10px; padding: 10px 20px; font-size: 0.9rem;">
+                        <i data-lucide="message-circle"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> KSK SOLAR SYSTEMS. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+                    <i data-lucide="arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.link/mtj2dm" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            <h3>Connect With KSK SOLAR SYSTEMS</h3>
+            <p>Fill out the form below and we will open a WhatsApp chat with your details so you can send it directly to our team.</p>
+            
+            <div class="success-message" id="success-message">
+                WhatsApp is opening in a new tab. Please press <strong>Send</strong> in WhatsApp to deliver your message. If it didn't open, use the fallback options below.
+            </div>
+
+            <form id="inquiry-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" class="form-control" required>
+                    <div class="error-message">Please enter your full name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                    <div class="error-message">Please enter your phone number.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="product">Product of Interest *</label>
+                    <select id="product" class="form-control" required>
+                        <option value="">Select a product</option>
+                        <option value="Solar Panels">Solar Panels</option>
+                        <option value="Hybrid Inverters">Hybrid Inverters</option>
+                        <option value="Lithium-Ion Batteries">Lithium-Ion Batteries</option>
+                        <option value="Tubular Batteries">Tubular Batteries</option>
+                        <option value="Solar Street Lights">Solar Street Lights</option>
+                        <option value="Solar Floodlights & Outdoor Lighting">Solar Floodlights & Outdoor Lighting</option>
+                        <option value="Solar Charge Controllers">Solar Charge Controllers</option>
+                        <option value="Solar Fans">Solar Fans</option>
+                        <option value="Solar Security Cameras">Solar Security Cameras</option>
+                        <option value="Portable Solar Power Stations">Portable Solar Power Stations</option>
+                        <option value="Other Solar Accessories">Other Solar Accessories</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="error-message">Please select a product.</div>
+                </div>
+                <div class="form-group">
+                    <label for="customer-type">Customer Type</label>
+                    <select id="customer-type" class="form-control">
+                        <option value="Individual">Individual</option>
+                        <option value="Homeowner">Homeowner</option>
+                        <option value="Business Owner">Business Owner</option>
+                        <option value="Installer">Installer</option>
+                        <option value="Reseller">Reseller</option>
+                        <option value="Contractor">Contractor</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity or Project Size (Optional)</label>
+                    <input type="text" id="quantity" class="form-control" placeholder="e.g., 1 unit, 5kW system">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" class="form-control" placeholder="City / State" required>
+                    <div class="error-message">Please enter your location.</div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-method">Preferred Contact Method</label>
+                    <select id="contact-method" class="form-control">
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Requirements *</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                    <div class="error-message">Please enter your message.</div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">I agree that KSK SOLAR SYSTEMS may use the information I provide to respond to my inquiry. *</label>
+                </div>
+                <div class="error-message" id="consent-error" style="margin-bottom: 15px;">You must agree to the privacy terms.</div>
+                
+                <button type="submit" class="btn btn-gold" style="width: 100%;" id="submit-btn">Send Inquiry on WhatsApp</button>
+            </form>
+
+            <div class="fallback-message" id="fallback-message">
+                <p style="margin-bottom: 10px; font-weight: 600;">If WhatsApp did not open automatically, copy the message below and send it to us manually:</p>
+                <textarea id="fallback-text" readonly></textarea>
+                <button class="btn btn-gold" id="copy-btn" style="width: 100%; margin-bottom: 10px;">Copy Message</button>
+                <button class="btn btn-outline" id="retry-btn" style="width: 100%; border-color: var(--gold); color: var(--black);">Try WhatsApp Again</button>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">Your information is only used to respond to this inquiry. We do not store your data on this website.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Sticky Navbar & Back to Top
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            if (window.scrollY > 500) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if(navLinks.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Back to top
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Lightbox Logic
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        // Product Data - Reusing Evans Solar Images where applicable
+        const products = [
+            {
+                title: "Solar Panels",
+                desc: "Panels for solar power generation in residential and commercial applications.",
+                img: "solar-showroom-display.jpg"
+            },
+            {
+                title: "Hybrid Inverters",
+                desc: "Inverters for suitable solar, battery, and grid power configurations.",
+                img: "hybrid-inverter-battery-stack.jpg"
+            },
+            {
+                title: "Lithium-Ion Batteries",
+                desc: "Battery storage solutions for compatible solar systems.",
+                img: "growatt-inverter-lithium-rack.jpg"
+            },
+            {
+                title: "Tubular Batteries",
+                desc: "Battery options for suitable inverter and backup power setups.",
+                img: "tubular-battery.jpg"
+            },
+            {
+                title: "Solar Street Lights",
+                desc: "Solar-powered lighting for streets, compounds, and outdoor spaces.",
+                img: "https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=600&q=80" // Fallback
+            },
+            {
+                title: "Solar Charge Controllers",
+                desc: "Equipment for regulating charging in compatible solar systems.",
+                img: "solar-charge-controller.jpg"
+            },
+            {
+                title: "Solar Fans",
+                desc: "Solar-powered and compatible fan solutions.",
+                img: "https://images.unsplash.com/photo-1590086782792-42dd2350140d?auto=format&fit=crop&w=600&q=80" // Fallback
+            },
+            {
+                title: "Solar Security Cameras",
+                desc: "Solar-powered security camera options.",
+                img: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?auto=format&fit=crop&w=600&q=80" // Fallback
+            },
+            {
+                title: "Portable Solar Power Stations",
+                desc: "Portable power solutions for suitable devices and applications.",
+                img: "https://images.unsplash.com/photo-1620067928605-0b9b8b5e6f6c?auto=format&fit=crop&w=600&q=80" // Fallback
+            },
+            {
+                title: "Solar Floodlights & Outdoor Lighting",
+                desc: "Outdoor lighting options for compounds, shops, and other spaces.",
+                img: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" // Fallback
+            },
+            {
+                title: "Other Solar Accessories",
+                desc: "Additional equipment and accessories available from the business.",
+                img: "wall-mounted-inverter-system.jpg"
+            }
+        ];
+
+        // Render Products
+        const productGrid = document.getElementById('product-grid');
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card reveal';
+            
+            card.innerHTML = `
+                <div class="product-image">
+                    <img src="${product.img}" alt="${product.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Image+Not+Found'">
+                </div>
+                <div class="product-info">
+                    <h3>${product.title}</h3>
+                    <p>${product.desc}</p>
+                    <a href="https://wa.me/2348144302941?text=${encodeURIComponent(`Hello KSK SOLAR SYSTEMS, I am interested in your ${product.title.toLowerCase()}. Please let me know the available options, specifications, and prices.`)}" target="_blank" class="btn btn-gold">
+                        <i data-lucide="message-circle"></i> Enquire on WhatsApp
+                    </a>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+
+        // Re-observe new product cards
+        document.querySelectorAll('.product-card').forEach(el => revealObserver.observe(el));
+
+        // Modal Logic
+        const modal = document.getElementById('contact-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const openModalBtns = document.querySelectorAll('.open-modal');
+        const form = document.getElementById('inquiry-form');
+        const successMessage = document.getElementById('success-message');
+        const fallbackMessage = document.getElementById('fallback-message');
+        const fallbackText = document.getElementById('fallback-text');
+        const submitBtn = document.getElementById('submit-btn');
+
+        // Open Modal
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close Modal
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                fallbackMessage.style.display = 'none';
+                form.style.display = 'block';
+            }, 300);
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+
+        // Form Submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            const requiredFields = ['name', 'phone', 'product', 'location', 'message'];
+            
+            requiredFields.forEach(fieldId => {
+                const input = document.getElementById(fieldId);
+                const group = input.closest('.form-group');
+                if (!input.value.trim()) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else {
+                    group.classList.remove('error');
+                }
+            });
+
+            const consent = document.getElementById('consent');
+            const consentError = document.getElementById('consent-error');
+            if (!consent.checked) {
+                consentError.style.display = 'block';
+                isValid = false;
+            } else {
+                consentError.style.display = 'none';
+            }
+
+            if (!isValid) return;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Processing...';
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const product = document.getElementById('product').value;
+            const customerType = document.getElementById('customer-type').value;
+            const quantity = document.getElementById('quantity').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const contactMethod = document.getElementById('contact-method').value;
+            const message = document.getElementById('message').value.trim();
+
+            let waMessage = `Hello KSK SOLAR SYSTEMS,\n\nI would like to make an inquiry about your products.\n\n`;
+            waMessage += `Full Name: ${name}\n`;
+            waMessage += `Phone Number: ${phone}\n`;
+            if (email) waMessage += `Email: ${email}\n`;
+            waMessage += `Product of Interest: ${product}\n`;
+            waMessage += `Customer Type: ${customerType}\n`;
+            if (quantity) waMessage += `Quantity / Project Size: ${quantity}\n`;
+            waMessage += `Location: ${location}\n`;
+            waMessage += `Preferred Contact Method: ${contactMethod}\n\n`;
+            waMessage += `My Requirements:\n${message}\n\n`;
+            waMessage += `Please provide information about the available products, prices, and suitable options.\n\nThank you.`;
+
+            const encodedMessage = encodeURIComponent(waMessage);
+            
+            // Using the direct WhatsApp number provided (08144302941 -> 2348144302941)
+            const waUrl = `https://wa.me/2348144302941?text=${encodedMessage}`;
+
+            const newWindow = window.open(waUrl, '_blank');
+
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                showFallback(waMessage);
+            } else {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                showFallback(waMessage);
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Send Inquiry on WhatsApp';
+        });
+
+        function showFallback(message) {
+            fallbackMessage.style.display = 'block';
+            fallbackText.value = message;
+            
+            document.getElementById('copy-btn').onclick = () => {
+                fallbackText.select();
+                document.execCommand('copy');
+                const copyBtn = document.getElementById('copy-btn');
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = 'Copied!';
+                setTimeout(() => copyBtn.innerHTML = originalText, 2000);
+            };
+
+            document.getElementById('retry-btn').onclick = () => {
+                const encoded = encodeURIComponent(message);
+                window.open(`https://wa.me/2348144302941?text=${encoded}`, '_blank');
+            };
+        }
+
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', () => {
+                input.closest('.form-group').classList.remove('error');
+            });
+        });
+        document.getElementById('consent').addEventListener('change', () => {
+            document.getElementById('consent-error').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
